@@ -1,73 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exercicio - 3</title>
-</head>
-<body>
+<html>
+    <head>
+            <meta charset="UTF-8">
+            <title>Tabela de Funcionários</title>
+    </head>
+    <body>
+            
+    <table border="1" align="center">
 
-    <table border="1">
+        <h1 align="center"><b>Escola Virtual</b></h1>
+        <h2 align="center"><b> Formulário de Pré-Matrícula</b></h2>
+        <hr width="40%" size="3">
 
-        <tbody>
+        <table border = "2" cellpadding = "5" align="center" >
+            
+            <tr>
+                <td>
+                    <b>Dados Pessoais:</b>
+                        <table border="0" width = "100%">
+                            <tr>
+                                <td align="right"> Nome do aluno: </td>
+                                <td><input type="txtname" name="aluno" size="30" maxlength="30" id="txtnome"></td> 
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td align="right"> Nascimento (dd/mm/aaaa):</td>
+                                    <td><input type="text" name="dia"  size="2" maxlength="2">/
+                            <input type="text" name="mes"  size="2" maxlength="2">/
+                            <input type="text" name="ano"  size="4" maxlength="4"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Nome da Mãe:</td>
+                        <td><input type="text" name="mae" size="30" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                            <td align="right">Nome do Pai:</td>
+                            <td><input type="text" name="pai" size="30" maxlength="30"></td>
+                    </tr>
+                    <tr>
+                            <td align="right">Telefone:</td>
+                            <td> DDD (<input type="text" name="ddd"  size="3" maxlength = "3">) 
+                            Tel: <input type="text" name="tel"  size="9" maxlength = "9">
+                            Ramal:<input type="text" name="ramal"  size="4" maxlength = "4"></td>
+                               
+                    </tr>
+                    <tr>
+                            <td align="right">E-mail:</td>
+                            <td><input type="text" name="email" size="30" maxlength="30""></td>
+                    </tr>
+                </table>
+                   </td>
+                   </tr>
+                   <tr>
+                    
+                            <td>
+                            <b>Informações de Matrícula :</b>
+                            <table border="0" width = "100%">
+                                    <tr valign = "top">
+                            <td>
+                            Série:<br>
+                            <select>
+                                <option value="valor 1">pré-escolar
+                                <option value="valor 2">1<sup> série 1 &deg; grau
+                                <option value="valor 3">2<sup> série 1 &deg; grau
+                                <option value="valor 4">3<sup> série 1 &deg; grau 
+                                <option value="valor 5">4<sup> série 1 &deg; grau 
+                                <option value="valor 6">5<sup> série 1 &deg; grau 
+                                <option value="valor 7">6<sup> série 1 &deg; grau 
+                                <option value="valor 8">7<sup> série 1 &deg; grau 
+                                <option value="valor 9">8<sup> série 1 &deg; grau 
+                                <option value="valor 10">9<sup> série 1 &deg; grau 
+                                <option value="valor 11">1<sup> série 2 &deg; grau 
+                                <option value="valor 12">2<sup> série 2 &deg; grau
+                                <option value="valor 13">3<sup> série 2 &deg; grau     
+                               </select>
+                    </tr>
+                            <td>
+                            Turno:<br>
+                            <input type="radio" name="turno" value="manhã">Manhã<br>
+                            <input type="radio" name="turno" value="tarde">Tarde
+                            </td>
+                            <td>
+                                Atividades Extracurriculares:<br>
+                                <input type="checkbox" name="inf" value="valor1">Informática<br>
+                                <input type="checkbox" name="mus" value="valor1">Música<br>
+                                <input type="checkbox" name="bal" value="valor1">Balet<br>
+                                <input type="checkbox" name="pin" value="valor1">Pintura<br>
+                                <input type="checkbox" name="jud" value="valor1">Judô<br>
+                                <input type="checkbox" name="fut" value="valor1">Futebol
+                            </td>
+                    </tr>
+                    </table>
+        </table>
+                <p><center>
+            <input type="submit" value="Enviar Formulário">
+            <input type="reset" value="Limpar Campos">
+        </center>
+    </p>
+        
 
-    <form method="POST" action="">
-        <label for="nomealuno">Nome do aluno: </label>
-        <input id="nomealuno" type="text" required name="nomealuno" maxlength="40">
     </form>
-
-    <form method="POST" action="">
-        <label for="datanasc">Data de nascimento do Aluno</label>
-        <input required type="date">
-    </form> 
-
-    <form method="POST" action="">
-        <label for="nomemae">Nome da Mãe: </label>
-        <input id="nomemae" type="text" required name="nomemae" maxlength="40">
-    </form>
-
-    <form method="POST" action="">
-        <label for="nomepai">Nome do Pai: </label>
-        <input id="nomepai" type="text" required name="nomepai" maxlength="40">
-    </form>
-
-    <form method="POST">
-        <label for="telefone">Telefone: </label>
-        <input required name="tel" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4}">(xx) xxxx-xxxx
-    </form>
-
-    <form method="POST" action="">
-        <label for="email">E-mail: </label>
-        <input id="email" name="email" type="email" required>
-    </form>
-
-    <form>
-        <select name="selecioneserie" size="1">
-            <option>Pré 1</option>
-            <option>Pré 2</option>
-            <option>1º (Fundamental)</option>
-            <option>2º (Fundamental)</option>
-            <option>3º (Fundamental)</option>
-            <option>4º (Fundamental)</option>
-            <option>5º (Fundamental)</option>
-            <option>6º (Fundamental)</option>
-            <option>7º (Fundamental)</option>
-            <option>8º (Fundamental)</option>
-            <option>9º (Fundamental)</option>
-            <option>1º (Médio)</option>
-            <option>2º (Médio)</option>
-            <option>3º (Médio</option>
-        </select>
-    </form>
-
-    <form>
-
-    </form>
-
-        </tbody>
-
-    </table>
-
-</body>
+ </body>
 </html>
